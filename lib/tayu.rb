@@ -41,8 +41,6 @@ class Tayu < Sinatra::Base
 		q=JSON[q]
 		end
 	params = {:query => q}
-	puts q
-	puts params
 
         response_nodelist = RestClient.get"http://#{Tayu.puppetdb_server}:#{Tayu.puppetdb_port}/nodes",  { :accept => :json, :params => params }
         return JSON.parse(response_nodelist)
