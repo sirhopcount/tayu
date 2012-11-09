@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name        = 'tayu'
-  s.version     = '0.0.1'
-  s.date        = '2012-10-29'
-  s.summary     = "Intergrates PuppetDB with Rundeck"
+  s.version     = '0.0.2'
+  s.date        = '2012-11-09'
+  s.summary     = "Integrates PuppetDB with Rundeck"
   s.description = "Provides a resource endpoint for RunDeck from a PuppetDB server"
   s.authors     = "Adrian van Dongen"
   s.email       = 'sirhopcount@goodfellasonline.nl'
