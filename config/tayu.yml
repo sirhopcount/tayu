@@ -2,5 +2,4 @@
 :puppetdb_port: 8080
 :username: rundeck
 :allowed_tags:
-  location
-  updateschedule
+  architecture
