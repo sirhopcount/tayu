@@ -10,5 +10,6 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/sirhopcount/tayu'
   s.executable  = 'tayu'
   s.add_runtime_dependency "sinatra"
+  s.add_runtime_dependency 'rest-client'
   s.add_dependency "builder", ">= 2.0.0"
 end
