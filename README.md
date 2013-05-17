@@ -7,7 +7,7 @@ Tayu
 Description
 -----------
 
-A webservice to integrate PuppetDB with Rundeck
+A web service to integrate PuppetDB with Rundeck.
 
 Requirements
 ------------
@@ -15,6 +15,7 @@ Requirements
 * `json`
 * `sinatra`
 * `builder`
+* `rest-client`
 
 Installation & Usage
 --------------------
