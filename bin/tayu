@@ -37,8 +37,13 @@ optparse = OptionParser.new do |opts|
   end 
 
   options[:port] = 8144
-  opts.on( '-p', '--port PORT', 'The port to run tayu on') do |port|
+  opts.on( '-p', '--port PORT', "The port to run tayu on (default: #{options[:port]})") do |port|
     options[:port] = port
+  end
+
+  options[:host] = 'localhost'
+  opts.on( '-o', '--host HOST', "The host to run tayu on (default: #{options[:host]})") do |host|
+    options[:host] = host
   end
 
   opts.separator ""
@@ -58,10 +63,9 @@ begin
   Tayu.puppetdb_port = config[:puppetdb_port]
   Tayu.allowed_tags = config[:allowed_tags].split(' ')
   Tayu.username = config[:username]
-  Tayu.run! :host => "localhost", :port => options[:port] 
+  Tayu.run! :bind => options[:host], :port => options[:port]
 rescue OptionParser::InvalidArgument, OptionParser::InvalidOption, OptionParser::MissingArgument
   puts $!.to_s
   puts optparse
   exit
 end
-
